@@ -1,1 +1,1 @@
-Dependency Injection Viewer plugin for Eclipse
+DIVi: Dependency Injection Viewer plugin for Eclipse
