@@ -22,7 +22,7 @@ To do this, you can:
 How to use
 ----------
 
-1. Select one or more projects
+1. In __Project Explorer__ select one or more projects
 2. Right-click -> DIVi -> View Dependency Injection
 3. DI Viewer view should appear with a tree, like this:
 
