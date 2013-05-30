@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Dependency Injection"
+            id="divi">
+      </category>
+      <view
+            name="DI Viewer"
+            icon="icons/sample.gif"
+            category="divi"
+            class="divi.views.DIViewer"
+            id="divi.views.DIViewer">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jst.j2ee.J2EEPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.TaskList"
+               relationship="right"
+               id="divi.views.DIViewer">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+         <objectContribution
+            adaptable="true"
+            id="divi.ProjectActions"
+            objectClass="org.eclipse.core.resources.IProject">
+         <menu
+               id="divi"
+               label="DIVi"
+               path="group.build">
+            <separator name="doit" />
+            <separator name="save" />
+         </menu>
+         
+           <action
+               class="divi.engine.AnalyzeProjectAction"
+               id="divi.AnalyzeProject"
+               label="View Dependency Injection"
+               menubarPath="divi/doit"
+               tooltip="View dependency injection in project(s).">
+           </action>
+
+           <visibility>
+              <objectState
+                    name="nature"
+                    value="org.eclipse.jdt.core.javanature">
+              </objectState>
+           </visibility>
+
+      </objectContribution>
+   </extension>
+   
+   <extension point="org.eclipse.ui.menus">
+        <menuContribution locationURI="toolbar:divi.views.DIViewer">
+            <command commandId="org.eclipse.ui.navigate.collapseAll" style="push" />
+            <command commandId="org.eclipse.ui.navigate.expandAll" style="push" />
+        </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="divi.preferences.PreferencesPage"
+            id="divi.preferences.PreferencesPage"
+            name="DIVi">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="divi.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+
+</plugin>
