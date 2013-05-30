@@ -26,13 +26,15 @@ How to use
 2. Right-click -> DIVi -> View Dependency Injection
 3. DI Viewer view should appear with a tree, like this:
 
+```
 [project_1]
-  |-(C) fully.qualified.name.of.Class ({nr of injected dependencies})
-    |- @ fully.qualified.name.of.injected.Type : {variable name}
-      |- (C) fully.qualified.name.of.Implementation1
-      |- (C) fully.qualified.name.of.Implementation2
+  (C) fully.qualified.name.of.Class ({nr of injected dependencies})
+    @ fully.qualified.name.of.injected.Type : {variable name}
+      (C) fully.qualified.name.of.Implementation1
+      (C) fully.qualified.name.of.Implementation2
 [project_2]
   ... similar to project_1
+```
 
 4. Double-click on "Class" or "injected.Type" to open up that selected type in the editor.
 
