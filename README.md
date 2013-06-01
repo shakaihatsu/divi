@@ -14,10 +14,11 @@ to Eclipse.
 
 To do this, you can:
 
-1. Left-click on [divi] -> Export... -> Plug-in Development / Deployable plug-ins and fragments -> Next >
+1. Import DIVi into Eclipse as an existing project. (General, not Maven.)
+2. Left-click on [divi] -> Export... -> Plug-in Development / Deployable plug-ins and fragments -> Next >
   Select Directory, enter the {path} where you want to export [divi] as a jar
-2. Copy {path}/plugins/divi_{version}.jar to the plugins directory of your Eclipse installation
-3. (Re)start Eclipse (might need to do it whith the -clean option)
+3. Copy {path}/plugins/divi_{version}.jar to the plugins directory of your Eclipse installation
+4. (Re)start Eclipse (might need to do it whith the -clean option)
 
 How to use
 ----------
@@ -26,18 +27,17 @@ How to use
 2. Right-click -> DIVi -> View Dependency Injection
 3. DI Viewer view should appear with a tree, like this:
 
-```
-[project_1]
-  (C) fully.qualified.name.of.Class ({nr of injected dependencies})
-    @ fully.qualified.name.of.injected.Type : {variable name}
-      (C) fully.qualified.name.of.Implementation1
-      (C) fully.qualified.name.of.Implementation2
-[project_2]
-  ... similar to project_1
-```
+      ```
+      [project_1]
+        (C) fully.qualified.name.of.Class ({nr of injected dependencies})
+          @ fully.qualified.name.of.injected.Type : {variable name}
+            (C) fully.qualified.name.of.Implementation1
+            (C) fully.qualified.name.of.Implementation2
+      [project_2]
+        ... similar to project_1
+      ```
 
-4. Double-click on "Class" or "injected.Type" to open up that selected type in the editor.
+4. Double-click on "Class" or "injected.Type" or "ImplementationN" to open it in the Eclipse editor.
 
-2. alternative) You can analyze your project (again or for the first time as well) by pressing the "i" button on the
-  action bar of the DI Viewer, or from a context menu in the DI Viewer. Project(s) need to be selected beforehand in
-  this case.
+5. You can (re)analyze your project (resolve dependency injections again) by pressing the "i" button on the action bar
+  of the DI Viewer, or from a context menu in the DI Viewer. Project(s) need to be selected beforehand in this case.
