@@ -27,7 +27,7 @@ How to use
 2. Right-click -> DIVi -> View Dependency Injection
 3. DI Viewer view should appear with a tree, like this:
 
-![ATMStateMachine](http://shakaihatsu.github.io/divi/images/example.png)
+![example](http://shakaihatsu.github.io/divi/images/example.png)
 
 4. Double-click on "Class" or "injected.Type" or "ImplementationN" to open it in the Eclipse editor.
 
