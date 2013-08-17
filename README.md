@@ -27,6 +27,7 @@ How to use
 2. Right-click -> DIVi -> View Dependency Injection
 3. DI Viewer view should appear with a tree, like this:
 
+![ATMStateMachine](http://shakaihatsu.github.io/divi/images/example.png)
       ```
       [project_1]
         (C) fully.qualified.name.of.Class ({nr of injected dependencies})
