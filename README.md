@@ -28,15 +28,6 @@ How to use
 3. DI Viewer view should appear with a tree, like this:
 
 ![ATMStateMachine](http://shakaihatsu.github.io/divi/images/example.png)
-      ```
-      [project_1]
-        (C) fully.qualified.name.of.Class ({nr of injected dependencies})
-          @ fully.qualified.name.of.injected.Type : {variable name}
-            (C) fully.qualified.name.of.Implementation1
-            (C) fully.qualified.name.of.Implementation2
-      [project_2]
-        ... similar to project_1
-      ```
 
 4. Double-click on "Class" or "injected.Type" or "ImplementationN" to open it in the Eclipse editor.
 
